@@ -1,0 +1,9 @@
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Entity\bin\Debug\netcoreapp3.1\MaleFashion.Entity.deps.json
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Entity\bin\Debug\netcoreapp3.1\MaleFashion.Entity.dll
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Entity\bin\Debug\netcoreapp3.1\MaleFashion.Entity.pdb
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Entity\obj\Debug\netcoreapp3.1\MaleFashion.Entity.csprojAssemblyReference.cache
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Entity\obj\Debug\netcoreapp3.1\MaleFashion.Entity.AssemblyInfoInputs.cache
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Entity\obj\Debug\netcoreapp3.1\MaleFashion.Entity.AssemblyInfo.cs
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Entity\obj\Debug\netcoreapp3.1\MaleFashion.Entity.csproj.CoreCompileInputs.cache
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Entity\obj\Debug\netcoreapp3.1\MaleFashion.Entity.dll
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Entity\obj\Debug\netcoreapp3.1\MaleFashion.Entity.pdb

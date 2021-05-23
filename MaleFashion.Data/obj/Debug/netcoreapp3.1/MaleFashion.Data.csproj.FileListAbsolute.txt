@@ -1,0 +1,15 @@
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\bin\Debug\netcoreapp3.1\MaleFashion.Data.deps.json
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\bin\Debug\netcoreapp3.1\MaleFashion.Data.runtimeconfig.json
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\bin\Debug\netcoreapp3.1\MaleFashion.Data.runtimeconfig.dev.json
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\bin\Debug\netcoreapp3.1\MaleFashion.Data.dll
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\bin\Debug\netcoreapp3.1\MaleFashion.Data.pdb
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\bin\Debug\netcoreapp3.1\MaleFashion.Entity.dll
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\bin\Debug\netcoreapp3.1\MaleFashion.Entity.pdb
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\obj\Debug\netcoreapp3.1\MaleFashion.Data.csprojAssemblyReference.cache
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\obj\Debug\netcoreapp3.1\MaleFashion.Data.AssemblyInfoInputs.cache
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\obj\Debug\netcoreapp3.1\MaleFashion.Data.AssemblyInfo.cs
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\obj\Debug\netcoreapp3.1\MaleFashion.Data.csproj.CoreCompileInputs.cache
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\obj\Debug\netcoreapp3.1\MaleFashion.Data.csproj.CopyComplete
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\obj\Debug\netcoreapp3.1\MaleFashion.Data.dll
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\obj\Debug\netcoreapp3.1\MaleFashion.Data.pdb
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.Data\obj\Debug\netcoreapp3.1\MaleFashion.Data.genruntimeconfig.cache
