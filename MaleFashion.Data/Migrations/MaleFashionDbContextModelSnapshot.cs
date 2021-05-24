@@ -229,6 +229,9 @@ namespace MaleFashion.Data.Migrations
                     b.Property<DateTime>("AddedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("BrandsModelId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
@@ -251,6 +254,8 @@ namespace MaleFashion.Data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BrandsModelId");
 
                     b.ToTable("Products");
                 });
@@ -278,17 +283,9 @@ namespace MaleFashion.Data.Migrations
                     b.Property<int>("MainCategoryId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ProductMainCategoryMainCategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ProductMainCategoryProductId")
-                        .HasColumnType("int");
-
                     b.HasKey("ProductId", "MainCategoryId");
 
                     b.HasIndex("MainCategoryId");
-
-                    b.HasIndex("ProductMainCategoryProductId", "ProductMainCategoryMainCategoryId");
 
                     b.ToTable("ProductMainCategories");
                 });
@@ -403,6 +400,30 @@ namespace MaleFashion.Data.Migrations
                     b.ToTable("SubCategories");
                 });
 
+            modelBuilder.Entity("MaleFashion.Entity.ViewComponentModel.Hero", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Header")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Heros");
+                });
+
             modelBuilder.Entity("MaleFashion.Entity.Models.BrandsModel", b =>
                 {
                     b.HasOne("MaleFashion.Entity.Models.Brand", "Brand")
@@ -447,10 +468,19 @@ namespace MaleFashion.Data.Migrations
                     b.Navigation("Option");
                 });
 
+            modelBuilder.Entity("MaleFashion.Entity.Models.Product", b =>
+                {
+                    b.HasOne("MaleFashion.Entity.Models.BrandsModel", "BrandsModel")
+                        .WithMany()
+                        .HasForeignKey("BrandsModelId");
+
+                    b.Navigation("BrandsModel");
+                });
+
             modelBuilder.Entity("MaleFashion.Entity.Models.ProductCategory", b =>
                 {
                     b.HasOne("MaleFashion.Entity.Models.Category", "Category")
-                        .WithMany("ProductSubCategories")
+                        .WithMany("ProductCategories")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -469,7 +499,7 @@ namespace MaleFashion.Data.Migrations
             modelBuilder.Entity("MaleFashion.Entity.Models.ProductMainCategory", b =>
                 {
                     b.HasOne("MaleFashion.Entity.Models.MainCategory", "MainCategory")
-                        .WithMany()
+                        .WithMany("ProductMainCategories")
                         .HasForeignKey("MainCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -479,10 +509,6 @@ namespace MaleFashion.Data.Migrations
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("MaleFashion.Entity.Models.ProductMainCategory", null)
-                        .WithMany("ProductMainCategories")
-                        .HasForeignKey("ProductMainCategoryProductId", "ProductMainCategoryMainCategoryId");
 
                     b.Navigation("MainCategory");
 
@@ -578,7 +604,12 @@ namespace MaleFashion.Data.Migrations
 
             modelBuilder.Entity("MaleFashion.Entity.Models.Category", b =>
                 {
-                    b.Navigation("ProductSubCategories");
+                    b.Navigation("ProductCategories");
+                });
+
+            modelBuilder.Entity("MaleFashion.Entity.Models.MainCategory", b =>
+                {
+                    b.Navigation("ProductMainCategories");
                 });
 
             modelBuilder.Entity("MaleFashion.Entity.Models.OptionValue", b =>
@@ -606,11 +637,6 @@ namespace MaleFashion.Data.Migrations
                     b.Navigation("ProductReviews");
 
                     b.Navigation("ProductSubCategories");
-                });
-
-            modelBuilder.Entity("MaleFashion.Entity.Models.ProductMainCategory", b =>
-                {
-                    b.Navigation("ProductMainCategories");
                 });
 
             modelBuilder.Entity("MaleFashion.Entity.Models.Review", b =>

@@ -1,3 +1,0 @@
-﻿Many to many connections:
-categories to product connection
-option value to product connection

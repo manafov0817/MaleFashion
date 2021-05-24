@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaleFashion.WebUi", "MaleFashion.WebUi\MaleFashion.WebUi.csproj", "{1D7079AF-1D34-4C65-AB0C-504C72D94E2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaleFashion.WebUi", "MaleFashion.WebUi\MaleFashion.WebUi.csproj", "{1D7079AF-1D34-4C65-AB0C-504C72D94E2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaleFashion.Data", "MaleFashion.Data\MaleFashion.Data.csproj", "{558BE057-830E-44F4-8356-4FE80E951CCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaleFashion.Data", "MaleFashion.Data\MaleFashion.Data.csproj", "{558BE057-830E-44F4-8356-4FE80E951CCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaleFashion.Entity", "MaleFashion.Entity\MaleFashion.Entity.csproj", "{EC5C3F04-66CC-40DA-AB68-A8C909B5CB76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaleFashion.Entity", "MaleFashion.Entity\MaleFashion.Entity.csproj", "{EC5C3F04-66CC-40DA-AB68-A8C909B5CB76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaleFashion.Business", "MaleFashion.Business\MaleFashion.Business.csproj", "{2F2474A7-E97F-4FFD-964F-808A0BD01C78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{EC5C3F04-66CC-40DA-AB68-A8C909B5CB76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC5C3F04-66CC-40DA-AB68-A8C909B5CB76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC5C3F04-66CC-40DA-AB68-A8C909B5CB76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F2474A7-E97F-4FFD-964F-808A0BD01C78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2474A7-E97F-4FFD-964F-808A0BD01C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2474A7-E97F-4FFD-964F-808A0BD01C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2474A7-E97F-4FFD-964F-808A0BD01C78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

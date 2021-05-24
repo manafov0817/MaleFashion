@@ -15,7 +15,7 @@ namespace MaleFashion.Entity.Models
         [ForeignKey("MainCategory")]
         public int MainCategoryId { get; set; }
         public MainCategory MainCategory { get; set; }
-        public List<ProductCategory> ProductSubCategories { get; set; }
+        public List<ProductCategory> ProductCategories { get; set; }
 
     }
 }

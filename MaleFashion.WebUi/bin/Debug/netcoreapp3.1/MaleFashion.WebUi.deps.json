@@ -32,6 +32,7 @@
       "MaleFashion.WebUi/1.0.0": {
         "dependencies": {
           "Abp.Web.Common": "6.0.0",
+          "MaleFashion.Business": "1.0.0",
           "MaleFashion.Data": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
@@ -2761,6 +2762,18 @@
         },
         "compile": {
           "lib/netstandard2.0/TimeZoneConverter.dll": {}
+        }
+      },
+      "MaleFashion.Business/1.0.0": {
+        "dependencies": {
+          "MaleFashion.Data": "1.0.0",
+          "MaleFashion.Entity": "1.0.0"
+        },
+        "runtime": {
+          "MaleFashion.Business.dll": {}
+        },
+        "compile": {
+          "MaleFashion.Business.dll": {}
         }
       },
       "MaleFashion.Data/1.0.0": {
@@ -5686,6 +5699,11 @@
       "sha512": "sha512-OeXMqNZ1Xt/9ehELN2khz8vT8wckg8VVa6Rx+XeYTdEIMaKETlSXkCzj4TuCGQ0L2SgXdpjGSh1XwZVusZE2Yw==",
       "path": "timezoneconverter/3.3.0",
       "hashPath": "timezoneconverter.3.3.0.nupkg.sha512"
+    },
+    "MaleFashion.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "MaleFashion.Data/1.0.0": {
       "type": "project",

@@ -3094,6 +3094,20 @@
           "lib/netstandard2.0/TimeZoneConverter.dll": {}
         }
       },
+      "MaleFashion.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "MaleFashion.Data": "1.0.0",
+          "MaleFashion.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MaleFashion.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MaleFashion.Business.dll": {}
+        }
+      },
       "MaleFashion.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -9995,6 +10009,11 @@
         "timezoneconverter.nuspec"
       ]
     },
+    "MaleFashion.Business/1.0.0": {
+      "type": "project",
+      "path": "../MaleFashion.Business/MaleFashion.Business.csproj",
+      "msbuildProject": "../MaleFashion.Business/MaleFashion.Business.csproj"
+    },
     "MaleFashion.Data/1.0.0": {
       "type": "project",
       "path": "../MaleFashion.Data/MaleFashion.Data.csproj",
@@ -10009,6 +10028,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Abp.Web.Common >= 6.0.0",
+      "MaleFashion.Business >= 1.0.0",
       "MaleFashion.Data >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
@@ -10050,6 +10070,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "D:\\Programming\\Web Programming\\MySelf\\Male Fashion\\MaleFashion\\MaleFashion.Business\\MaleFashion.Business.csproj": {
+              "projectPath": "D:\\Programming\\Web Programming\\MySelf\\Male Fashion\\MaleFashion\\MaleFashion.Business\\MaleFashion.Business.csproj"
+            },
             "D:\\Programming\\Web Programming\\MySelf\\Male Fashion\\MaleFashion\\MaleFashion.Data\\MaleFashion.Data.csproj": {
               "projectPath": "D:\\Programming\\Web Programming\\MySelf\\Male Fashion\\MaleFashion\\MaleFashion.Data\\MaleFashion.Data.csproj"
             }

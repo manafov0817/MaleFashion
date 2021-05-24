@@ -16,7 +16,8 @@ namespace MaleFashion.Entity.Models
         public int Sold { get; set; }
         public StatusEnum Status { get; set; }
         public DateTime AddedDate { get; set; }
-        public List<Discount> Discounts { get; set; }
+        public BrandsModel BrandsModel { get; set; }
+        public List<Discount> Discounts { get; set; }        
         public List<ProductSubCategory> ProductSubCategories { get; set; }
         public List<ProductCategory> ProductCategories { get; set; }
         public List<ProductMainCategory> ProductMainCategories { get; set; }

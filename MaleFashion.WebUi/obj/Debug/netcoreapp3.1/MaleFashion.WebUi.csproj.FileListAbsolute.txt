@@ -188,3 +188,7 @@ D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.WebUi
 D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.WebUi\bin\Debug\netcoreapp3.1\MaleFashion.Entity.dll
 D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.WebUi\bin\Debug\netcoreapp3.1\MaleFashion.Data.pdb
 D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.WebUi\bin\Debug\netcoreapp3.1\MaleFashion.Entity.pdb
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.WebUi\obj\Debug\netcoreapp3.1\Razor\Views\Shop\Index.cshtml.g.cs
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.WebUi\bin\Debug\netcoreapp3.1\MaleFashion.Business.dll
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.WebUi\bin\Debug\netcoreapp3.1\MaleFashion.Business.pdb
+D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.WebUi\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Hero\Default.cshtml.g.cs

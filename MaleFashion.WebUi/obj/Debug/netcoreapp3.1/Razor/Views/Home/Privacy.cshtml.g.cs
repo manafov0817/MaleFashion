@@ -19,8 +19,15 @@ using MaleFashion.WebUi;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.WebUi\Views\_ViewImports.cshtml"
+using MaleFashion.Entity.ViewComponentModel;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d8ddb6bffa5a9b264bf8f89038bf03c234083fd3", @"/Views/Home/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3ab942b6192107015b4f36857500ded6816fdc7a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"482605903cfe3771856f4454c64a14f846588c89", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Privacy : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

@@ -1,4 +1,5 @@
 ﻿using MaleFashion.Entity.Models;
+using MaleFashion.Entity.ViewComponentModel;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,8 @@ namespace MaleFashion.Data.Concrete.EfCore
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<ProductMainCategory> ProductMainCategories { get; set; }
         public DbSet<Contact> Contact { get; set; }
+        public DbSet<Hero> Heros { get; set; }
+
         //public DbSet<Banner> Banner { get; set; }
         //public DbSet<BestRatedProduct> BestRatedProducts { get; set; }
         //public DbSet<DealOfWeekProduct> DealOfWeekProducts { get; set; }

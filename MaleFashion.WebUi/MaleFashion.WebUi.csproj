@@ -16,6 +16,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>  
   <ItemGroup>
+    <ProjectReference Include="..\MaleFashion.Business\MaleFashion.Business.csproj" />
     <ProjectReference Include="..\MaleFashion.Data\MaleFashion.Data.csproj" />
   </ItemGroup>
 
