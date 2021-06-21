@@ -21,13 +21,34 @@ using MaleFashion.WebUi;
 #nullable disable
 #nullable restore
 #line 2 "D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.WebUi\Views\_ViewImports.cshtml"
+using MaleFashion.WebUi.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.WebUi\Views\_ViewImports.cshtml"
+using MaleFashion.WebUi.Enums;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.WebUi\Views\_ViewImports.cshtml"
+using MaleFashion.WebUi.Models.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "D:\Programming\Web Programming\MySelf\Male Fashion\MaleFashion\MaleFashion.WebUi\Views\_ViewImports.cshtml"
 using MaleFashion.Entity.ViewComponentModel;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"482605903cfe3771856f4454c64a14f846588c89", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8dd9f0250b32573573e4b2a05f506d6f59845c90", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

@@ -120,10 +120,10 @@ namespace MaleFashion.Data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<decimal>("DiscountWithNumber")
+                    b.Property<decimal?>("DiscountWithNumber")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("DiscountWithPercent")
+                    b.Property<decimal?>("DiscountWithPercent")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("EndDate")
@@ -137,9 +137,49 @@ namespace MaleFashion.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductId");
+                    b.HasIndex("ProductId")
+                        .IsUnique();
 
                     b.ToTable("Discount");
+                });
+
+            modelBuilder.Entity("MaleFashion.Entity.Models.InstagramProfile", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Hastag")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InstagramUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoUrl1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoUrl2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoUrl3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoUrl4")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoUrl5")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoUrl6")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("InstagramProfile");
                 });
 
             modelBuilder.Entity("MaleFashion.Entity.Models.MainCategory", b =>
@@ -400,6 +440,67 @@ namespace MaleFashion.Data.Migrations
                     b.ToTable("SubCategories");
                 });
 
+            modelBuilder.Entity("MaleFashion.Entity.ViewComponentModel.Banner", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("AddressLink")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Banners");
+                });
+
+            modelBuilder.Entity("MaleFashion.Entity.ViewComponentModel.BestSeller", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("BestSeller");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("BestSeller");
+                });
+
+            modelBuilder.Entity("MaleFashion.Entity.ViewComponentModel.DealOfTheWeek", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("DealOfTheWeeks");
+                });
+
             modelBuilder.Entity("MaleFashion.Entity.ViewComponentModel.Hero", b =>
                 {
                     b.Property<int>("Id")
@@ -422,6 +523,20 @@ namespace MaleFashion.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Heros");
+                });
+
+            modelBuilder.Entity("MaleFashion.Entity.ViewComponentModel.HotSale", b =>
+                {
+                    b.HasBaseType("MaleFashion.Entity.ViewComponentModel.BestSeller");
+
+                    b.HasDiscriminator().HasValue("HotSale");
+                });
+
+            modelBuilder.Entity("MaleFashion.Entity.ViewComponentModel.NewArrival", b =>
+                {
+                    b.HasBaseType("MaleFashion.Entity.ViewComponentModel.BestSeller");
+
+                    b.HasDiscriminator().HasValue("NewArrival");
                 });
 
             modelBuilder.Entity("MaleFashion.Entity.Models.BrandsModel", b =>
@@ -449,8 +564,8 @@ namespace MaleFashion.Data.Migrations
             modelBuilder.Entity("MaleFashion.Entity.Models.Discount", b =>
                 {
                     b.HasOne("MaleFashion.Entity.Models.Product", "Product")
-                        .WithMany("Discounts")
-                        .HasForeignKey("ProductId")
+                        .WithOne("Discount")
+                        .HasForeignKey("MaleFashion.Entity.Models.Discount", "ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -602,6 +717,28 @@ namespace MaleFashion.Data.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("MaleFashion.Entity.ViewComponentModel.BestSeller", b =>
+                {
+                    b.HasOne("MaleFashion.Entity.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("MaleFashion.Entity.ViewComponentModel.DealOfTheWeek", b =>
+                {
+                    b.HasOne("MaleFashion.Entity.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("MaleFashion.Entity.Models.Category", b =>
                 {
                     b.Navigation("ProductCategories");
@@ -624,7 +761,7 @@ namespace MaleFashion.Data.Migrations
 
             modelBuilder.Entity("MaleFashion.Entity.Models.Product", b =>
                 {
-                    b.Navigation("Discounts");
+                    b.Navigation("Discount");
 
                     b.Navigation("ProductCategories");
 

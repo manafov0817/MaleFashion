@@ -9,7 +9,7 @@ namespace MaleFashion.Business.Concrete
 {
     public class OptionValueManager : IOptionValueService
     {
-        private IOptionValueRepository _optionValueRepository;
+        private readonly IOptionValueRepository _optionValueRepository;
         public OptionValueManager ( IOptionValueRepository optionValueRepository )
         {
             _optionValueRepository = optionValueRepository;

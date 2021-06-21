@@ -10,13 +10,14 @@ namespace MaleFashion.WebUi.Components
     public class HeroViewComponent: ViewComponent
     {
         private readonly IHeroService _heroService;
+        
         public HeroViewComponent(IHeroService heroService)
         {
             _heroService = heroService;
         }
+
         public IViewComponentResult Invoke()
         {
-
             return View(_heroService.GetAll());
         }
     }

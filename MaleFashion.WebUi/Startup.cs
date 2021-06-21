@@ -4,14 +4,9 @@ using MaleFashion.Data.Abstract;
 using MaleFashion.Data.Concrete.EfCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection; 
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MaleFashion.WebUi
 {
@@ -27,6 +22,9 @@ namespace MaleFashion.WebUi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            #region RepositoryPatternDependencies
+
+            #region Data
             // Data
             services.AddScoped<IProductRepository, EfCoreProductRepository>();
             services.AddScoped<IMainCategoryRepository, EfCoreMainCategoryRepository>();
@@ -49,8 +47,13 @@ namespace MaleFashion.WebUi
             //services.AddScoped<IDealOfWeekProductRepository, EfCoreDealOfWeekProductRepository>();
             //services.AddScoped<IBestRatedProductRepository, EfCoreBestRatedProductRepository>();
             //services.AddScoped<IPopularCategoryRepository, EfCorePopularCategoryRepository>();
+            services.AddScoped<INewArrivalRepository, EfCoreNewArrivalRepository>();
+            services.AddScoped<IBestSellerRepository, EfCoreBestSellerRepository>();
+            services.AddScoped<IHotSaleRepository, EfCoreHotSaleRepository>();
             services.AddScoped<IHeroRepository, EfCoreHeroRepository>();
-
+            services.AddScoped<IBannerRepository, EfCoreBannerRepository>();
+            services.AddScoped<IDealOfTheWeekRepository, EfCoreDealOfTheWeekRepository>();
+            services.AddScoped<IInstagramProfileRepository, EfCoreInstagramProfileRepository>();
 
 
             services.AddScoped<IProductMainCategoryRepository, EfCoreProductMainCategoryRepository>();
@@ -58,7 +61,9 @@ namespace MaleFashion.WebUi
             services.AddScoped<IProductSubCategoryRepository, EfCoreProductSubCategoryRepository>();
             services.AddScoped<IProductOptionValueRepository, EfCoreProductOptionValueRepository>();
             services.AddScoped<IProductPhotoRepository, EfCoreProductPhotoRepository>();
+            #endregion
 
+            #region Business 
             // Business
             services.AddScoped<IMainCategoryService, MainCategoryManager>();
             services.AddScoped<ICategoryService, CategoryManager>();
@@ -81,12 +86,24 @@ namespace MaleFashion.WebUi
             //services.AddScoped<IBestRatedProductService, BestRatedProductManager>();
             //services.AddScoped<IPopularCategoryService, PopularCategoryManager>();
             services.AddScoped<IHeroService, HeroManager>();
+            services.AddScoped<IBestSellerService, BestSellerManager>();
+            services.AddScoped<IHotSaleService, HotSaleManager>();
+            services.AddScoped<INewArrivalService, NewArrivalManager>();
+            services.AddScoped<IBannerService, BannerManager>();
+            services.AddScoped<IDealOfTheWeekService, DealOfTheWeekManager>();
+            services.AddScoped<IInstagramProfileService, InstagramProfileManager>();
 
             services.AddScoped<IProductOptionValueService, ProductOptionValueManager>();
             services.AddScoped<IProductPhotoService, ProductPhotoManager>();
             services.AddScoped<IProductMainCategoryService, ProductMainCategoryManager>();
             services.AddScoped<IProductCategoryService, ProductCategoryManager>();
             services.AddScoped<IProductSubCategoryService, ProductSubCategoryManager>();
+            #endregion
+
+            #endregion
+
+
+
 
             services.AddControllersWithViews();
             services.AddScoped<MaleFashionDbContext>();
@@ -108,6 +125,8 @@ namespace MaleFashion.WebUi
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            //app.UseMiddleware<>();
 
             app.UseRouting();
 

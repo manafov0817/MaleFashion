@@ -1,0 +1,31 @@
+﻿@model InstagramProfile
+@if (Model != null)
+{
+    <section class="instagram spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="instagram__pic">
+                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/@Model.PhotoUrl1"></div>
+                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/@Model.PhotoUrl2"></div>
+                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/@Model.PhotoUrl3"></div>
+                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/@Model.PhotoUrl4"></div>
+                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/@Model.PhotoUrl5"></div>
+                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/@Model.PhotoUrl6"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="instagram__text">
+                        <h2>
+                            <a class="instagram__text" href="@Model.InstagramUrl ">
+                                Instagram Hesabı
+                            </a>
+                        </h2>
+                        <p>@Model.Description</p>
+                        <h3>#@Model.Hastag</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

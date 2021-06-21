@@ -1,0 +1,19 @@
+﻿<div class="card">
+    <div class="card-heading">
+        <a data-toggle="collapse" data-target="#collapseThree">Qiymət aralığı</a>
+    </div>
+    <div id="collapseThree" class="collapse show" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="shop__sidebar__price">
+                <div class="price__box">
+                    <input type="number" step="10" min="0" placeholder="Min Qiymət (&#8380)" value="@(ShopFilter.MinPrice==0?"":($"{ShopFilter.MinPrice}"))" name="minPrice">
+                </div>
+
+                <div class="price__box">
+                    <input type="number" step="10" min="20" placeholder="Max Qiymət (&#8380)" value="@(ShopFilter.MaxPrice==0?"":($"{ShopFilter.MaxPrice}"))" name="maxPrice"> 
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

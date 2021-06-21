@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MaleFashion.Business.Abstract
 {
-    public interface IBrandsModelService : IGenericeService<BrandsModel>
+    public interface IBrandsModelService : IGenericService<BrandsModel>
     {      
          List<BrandsModel> GetBrandsModelsWithBrands ();
         List<BrandsModel> GetModelsByBrandId ( int id );

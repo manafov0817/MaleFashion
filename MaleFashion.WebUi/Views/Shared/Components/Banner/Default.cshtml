@@ -1,0 +1,40 @@
+﻿@model List<Banner>
+<section class="banner spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 offset-lg-4">
+                <div class="banner__item">
+                    <div class="banner__item__pic">
+                        <img src="img/banner/@Model[0].PhotoUrl" alt="">
+                    </div>
+                    <div class="banner__item__text">
+                        <h2>@Model[0].Title</h2>
+                        <a href="@Model[0].AddressLink">Keçid</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="banner__item banner__item--middle">
+                    <div class="banner__item__pic">
+                        <img src="img/banner/@Model[1].PhotoUrl" alt="">
+                    </div>
+                    <div class="banner__item__text">
+                        <h2>@Model[1].Title</h2>
+                        <a href="@Model[1].AddressLink">Keçid</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="banner__item banner__item--last">
+                    <div class="banner__item__pic">
+                        <img src="img/banner/@Model[2].PhotoUrl" alt="">
+                    </div>
+                    <div class="banner__item__text">
+                        <h2>@Model[2].Title</h2>
+                        <a href="@Model[2].AddressLink">Keçid</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

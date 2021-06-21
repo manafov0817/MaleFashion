@@ -5,8 +5,5 @@ using System.Text;
 
 namespace MaleFashion.Business.Abstract
 {
-    public interface IProductCategoryService : IGenericeService<ProductCategory>
-    { 
-        List<ProductCategory> GetAll (); 
-    }
+    public interface IProductCategoryService : IGenericService<ProductCategory> { }
 }

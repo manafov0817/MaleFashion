@@ -5,9 +5,8 @@ using System.Text;
 
 namespace MaleFashion.Business.Abstract
 {
-    public interface IOptionValueService : IGenericeService<OptionValue>
-    { 
-        List<OptionValue> GetAll (); 
+    public interface IOptionValueService : IGenericService<OptionValue>
+    {
         List<OptionValue> GetAllWithOptions ();
         List<OptionValue> GetAllColors ();
         List<OptionValue> GetOptionValuesByOptionId ( int id );

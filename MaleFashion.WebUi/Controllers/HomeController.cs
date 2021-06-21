@@ -9,9 +9,7 @@ using System.Threading.Tasks;
 namespace MaleFashion.WebUi.Controllers
 {
     public class HomeController : Controller
-    {
-        private readonly ILogger<HomeController> _logger;
-
+    { 
         public IActionResult Index()
         {
             return View();

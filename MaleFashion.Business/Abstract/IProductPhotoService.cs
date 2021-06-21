@@ -5,8 +5,7 @@ using System.Text;
 
 namespace MaleFashion.Business.Abstract
 {
-    public interface IProductPhotoService : IGenericeService<ProductPhoto>
+    public interface IProductPhotoService : IGenericService<ProductPhoto>
     { 
-        List<ProductPhoto> GetAll (); 
-    }
+     }
 }

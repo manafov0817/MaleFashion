@@ -5,8 +5,7 @@ using System.Text;
 
 namespace MaleFashion.Business.Abstract
 {
-    public interface IContactService : IGenericeService<Contact>
+    public interface IContactService : IGenericService<Contact>
     { 
-        List<Contact> GetAll (); 
     }
 }

@@ -9,7 +9,7 @@ namespace MaleFashion.Business.Concrete
 {
     public class MainCategoryManager : IMainCategoryService
     {
-        private IMainCategoryRepository _mainCategoryRepository;
+        private readonly IMainCategoryRepository _mainCategoryRepository;
         public MainCategoryManager ( IMainCategoryRepository mainCategoryRepository )
         {
             _mainCategoryRepository = mainCategoryRepository;

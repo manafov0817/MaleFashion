@@ -5,10 +5,9 @@ using System.Text;
 
 namespace MaleFashion.Business.Abstract
 {
-    public interface IProductService : IGenericeService<Product>
+    public interface IProductService : IGenericService<Product>
     { 
-        List<Product> GetAll (); 
-        List<Product> GetTopProducts ();
+         List<Product> GetTopProducts ();
         List<Product> GetProductWithCategoryTypes ();
         List<Product> GetAllProductsForShop ();
         List<Product> GetAllDiscountedProducts ();

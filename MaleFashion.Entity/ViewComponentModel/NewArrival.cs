@@ -6,13 +6,8 @@ using System.Text;
 
 namespace MaleFashion.Entity.ViewComponentModel
 {
-    public class NewArrival
+    public class NewArrival : BestSeller
     {
-        public int Id { get; set; }
-        public int ProductId { get; set; }
-        public Product Product { get; set; }
-        public int BestSellerId { get; set; }
-        public BestSeller BestSeller { get; set; }
         public BestSellerTypeEnum BestSellerEnum { get; } = BestSellerTypeEnum.NewArrival;
     }
 }

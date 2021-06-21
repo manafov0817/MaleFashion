@@ -32,15 +32,13 @@ namespace MaleFashion.Data.Concrete.EfCore
         public DbSet<ProductMainCategory> ProductMainCategories { get; set; }
         public DbSet<Contact> Contact { get; set; }
         public DbSet<Hero> Heros { get; set; }
+        public List<BestSeller> BestSellers { get; set; }
+        public DbSet<HotSale> HotSales { get; set; }
+        public DbSet<NewArrival> NewArrivals { get; set; }
+        public DbSet<Banner> Banners { get; set; }
+        public DbSet<DealOfTheWeek> DealOfTheWeeks { get; set; }
+        public DbSet<InstagramProfile> InstagramProfile { get; set; }
 
-        //public DbSet<Banner> Banner { get; set; }
-        //public DbSet<BestRatedProduct> BestRatedProducts { get; set; }
-        //public DbSet<DealOfWeekProduct> DealOfWeekProducts { get; set; }
-        //public DbSet<FeaturedProduct> FeaturedProducts { get; set; }
-        //public DbSet<OnSaleProduct> OnSaleProducts { get; set; }
-        //public DbSet<PopularCategory> PopularCategories { get; set; }
-        //public DbSet<Order> Orders { get; set; }
-        //public DbSet<OrderItem> OrderItems { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS; Initial Catalog = MaleFashionDbContext; Integrated Security = SSPI");
@@ -48,9 +46,6 @@ namespace MaleFashion.Data.Concrete.EfCore
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
-            //modelBuilder.Entity<Relate>().HasKey(c => new { c.RelateId });
-
 
             modelBuilder.Entity<ProductOptionValue>().HasKey(c => new { c.ProductId, c.OptionValueId });
 
@@ -69,6 +64,8 @@ namespace MaleFashion.Data.Concrete.EfCore
 
             modelBuilder.Entity<ProductMainCategory>().HasKey(c => new { c.ProductId, c.MainCategoryId });
 
+
+            modelBuilder.Entity<BestSeller>().HasOne(bs => bs.Product).WithMany().OnDelete(DeleteBehavior.NoAction);
 
             //modelBuilder.Entity<ProductRelate>().HasKey(c => new { c.ProductId, c.RelateId });
 

@@ -5,10 +5,9 @@ using System.Text;
 
 namespace MaleFashion.Business.Abstract
 {
-    public interface ISubCategoryService : IGenericeService<SubCategory> 
+    public interface ISubCategoryService : IGenericService<SubCategory> 
     { 
-        List<SubCategory> GetAll (); 
-        List<SubCategory> GetAllSubCategoriesWithCategoryAndMainCategory ();
+         List<SubCategory> GetAllSubCategoriesWithCategoryAndMainCategory ();
         List<SubCategory> GetSubCategoriesByCategoryId ( int id );
         SubCategory GetSubCategoryWithCategoryAndMainCategorybyId ( int id );
     }

@@ -11,12 +11,10 @@ namespace MaleFashion.Data.Concrete.EfCore
     {
         public Option GetByName ( string value )
         {
-            using (var context = new MaleFashionDbContext( ))
-            {
-                return context.Options
-                                   .Where(o => o.Name.ToLower( ) == value.ToLower( ))
-                                   .FirstOrDefault( );
-            }
+            using var context = new MaleFashionDbContext();
+            return context.Options
+                               .Where(o => o.Name.ToLower() == value.ToLower())
+                               .FirstOrDefault();
         }
     }
 }

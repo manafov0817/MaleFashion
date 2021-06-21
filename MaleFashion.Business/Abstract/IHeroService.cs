@@ -5,7 +5,5 @@ using System.Text;
 
 namespace MaleFashion.Business.Abstract
 {
-    public interface IHeroService : IGenericeService<Hero> 
-    {
-    }
+    public interface IHeroService : IGenericService<Hero> { }
 }

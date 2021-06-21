@@ -1,0 +1,25 @@
+﻿@model List<ShopCategoryViewModel>
+<div class="card">
+    <div class="card-heading">
+        <a data-toggle="collapse" data-target="#collapseOne">Kateqoriyalar</a>
+    </div>
+    <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="shop__sidebar__categories">
+                <ul class="nice-scroll">
+                    @foreach (ShopCategoryViewModel viewModel in Model)
+                    {
+                        <li>
+                            <a href="@Url.Action("ChangeCategoryFilter","Shop",
+                                                    new { id=viewModel.CategoryId,categoryTypeEnum=viewModel.CategoryType})"
+                               class=@((viewModel.CategoryId==ShopFilter.CategoryId && viewModel.CategoryType == ShopFilter.CategoryType)?"shop__category__choosen":"")>
+                                @viewModel.Name
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+          
+        </div>
+    </div>
+</div>
